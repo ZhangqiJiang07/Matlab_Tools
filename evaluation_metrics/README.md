@@ -9,12 +9,14 @@ This function is used to calculate the `approximate' _Area Under the Precision-R
 </div>
 
 Referring to [sklearn.metrics.average_precision_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html), the numerical formulation can be written as:
+
 $$
 AP = \sum_{i} (R_{i} - R_{i-1})P_i,
 $$
+
 where $R_{0} = 0$.
 
-[Mark] This formulation is one of the numerical integration rules, called the right rectangle rule. We can use other formulations to approximate the AUPRC.
+✒️ This formulation is one of the numerical integration rules, called the right rectangle rule. We can use other formulations to approximate the AUPRC.
 
 
 - **Mean average Precision (mAP)**:
