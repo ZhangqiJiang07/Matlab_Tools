@@ -1,8 +1,8 @@
 # Evaluation Metrics
 
-- **Binary average precision (AP)**: `binary_average_precision.m`
+- **Binary Average Precision (AP)**: `binary_average_precision.m`
 
-This function is used to calculate the `approximate' _Area Under the Precision-Recall Curve_ (AUPRC) in binary classification task.
+This function calculates the `approximate' _Area Under the Precision-Recall Curve_ (AUPRC) in binary classification task.
 
 <div  align="center">
  <img src="https://github.com/ZhangqiJiang07/Matlab_Tools/blob/main/evaluation_metrics/figs/PR_curve.png" width = "300" height = "300" alt="Precision-Recall Curve" />
@@ -19,5 +19,11 @@ where $R_{0} = 0$.
 ✒️ This formulation is one of the numerical integration rules, called the right rectangle rule. We can use other formulations to approximate the AUPRC.
 
 
-- **Mean average Precision (mAP)**:
+- **Mean Average Precision (mAP)**:`mean_average_precision.m`
+
+This function calculates the _class-level mean AUPRC_ in multi-class classification task by:
+
+$$
+mAP = \frac{1}{C} \sum_{i=1}^{C} AP_i.
+$$
 
