@@ -1,6 +1,6 @@
 # Evaluation Metrics
 
-- **Binary average precision (AP)**:
+- **Binary average precision (AP)**: `binary_average_precision.m`
 
 This function is used to calculate the `approximate' _Area Under the Precision-Recall Curve_ (AUPRC) in binary classification task.
 
