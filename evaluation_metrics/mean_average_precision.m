@@ -11,6 +11,12 @@ function [mAP] = mean_average_precision(y_true, y_scores)
 %   The mAP is calculated by:
 %       mAP = 1/C * \sum_i( AP_i )
 
+    % Normalization
+    if sum(sum(y_scores)) - size(y_scores,1) > 1e-6
+        y_scores = y_scores./sum(y_scores,2);
+    end
+    
+    % Calculate mean average precision in class-level.
     mAP = 0;
     for k = 1:length(unique(y_true))
         y_temp = zeros(size(y_true));
