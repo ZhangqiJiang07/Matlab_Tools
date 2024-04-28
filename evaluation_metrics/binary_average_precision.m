@@ -12,6 +12,8 @@ function [precision, recall, AP] = binary_average_precision(y_true, y_scores)
 
     posi_num = sum(sorted_y_true);
     threshold = sort(unique(sorted_y_scores), 'descend');
+    % avoid NaN value
+    threshold = threshold(~isnan(threshold));
 
     precision = zeros(1, length(threshold));
     recall = zeros(1, length(threshold));
