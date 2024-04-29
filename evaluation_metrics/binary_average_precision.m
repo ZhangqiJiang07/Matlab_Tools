@@ -4,7 +4,7 @@ function [precision, recall, AP] = binary_average_precision(y_true, y_scores)
 %   Params:
 %       - y_true: (1, n)      n is sample number
 %           Ground truth label, where 1 is setted as positive label.
-%       - y_scores: (1, n)
+%       - y_scores: (1, n),  $\in [0,1]$
 %           Normalized sample score.
 
     [sorted_y_scores, idx] = sort(y_scores, 'descend');
