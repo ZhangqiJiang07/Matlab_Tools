@@ -21,10 +21,10 @@ where $X_{max}$ and $X_{min}$ represent the column-wise (i.e., feature-wise) max
 This function will map the values to the interval \[-1, 1\]:
 
 $$
-\hat{X} = \frac{X - \bar{X}}{X_{max} - X_{min}},
+\hat{X} = \frac{X - \mu}{X_{max} - X_{min}},
 $$
 
-where $\bar{X}$ represents the column-wise (i.e., feature-wise) mean value.
+where $\mu$ represents the column-wise (i.e., feature-wise) mean value.
 
 - **Standardization (Z-score Normalization)**: `ZscoreNorm.m`
 
