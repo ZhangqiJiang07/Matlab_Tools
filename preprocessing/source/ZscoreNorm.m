@@ -11,11 +11,11 @@ function [X] = ZscoreNorm(M, Index)
     end
 
     X = zeros(size(M));
-    temp = M(Index, :);
+    temp = M(Index==1, :);
     temp_std = std(temp, [], 1);
     temp_std(temp_std == 0) = 1;
 
     % Standardization
-    X(Index, :) = (temp - mean(temp, 1)) ./ temp_std;
+    X(Index==1, :) = (temp - mean(temp, 1)) ./ temp_std;
 
 end
