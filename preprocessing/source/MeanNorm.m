@@ -11,7 +11,7 @@ function [X] = MeanNorm(M, Index)
         Index = ones(size(M, 1), 1);
     end
 
-    temp = M(Index, :);
+    temp = M(Index==1, :);
     temp_max = max(temp);
     temp_min = min(temp);
 
@@ -21,7 +21,7 @@ function [X] = MeanNorm(M, Index)
 
     % min-max normalization
     X = zeros(size(M));
-    X(Index, :) = (temp - mean(temp, 1)) ./ (temp_max - temp_min);
+    X(Index==1, :) = (temp - mean(temp, 1)) ./ (temp_max - temp_min);
 
 
 
